@@ -1,0 +1,140 @@
+[
+ 
+
+    [
+        {
+          "name": "Olawumi Olusegun",
+          "email": "olawumi.olusegun@gmail.com",
+          "password": "password123",
+          "role": "rider"
+        },
+        {
+          "name": "Adebayo Samuel",
+          "email": "adebayo.samuel@gmail.com",
+          "password": "password123",
+          "role": "rider"
+        },
+        {
+          "name": "Chinwe Okonkwo",
+          "email": "chinwe.okonkwo@gmail.com",
+          "password": "password123",
+          "role": "rider"
+        },
+        {
+          "name": "Emeka Uche",
+          "email": "emeka.uche@gmail.com",
+          "password": "password123",
+          "role": "rider"
+        },
+        {
+          "name": "Fatima Bello",
+          "email": "fatima.bello@gmail.com",
+          "password": "password123",
+          "role": "rider"
+        },
+        {
+          "name": "Adekunle Johnson",
+          "email": "adekunle.johnson@gmail.com",
+          "password": "password123",
+          "role": "driver"
+        },
+        {
+          "name": "Musa Ibrahim",
+          "email": "musa.ibrahim@gmail.com",
+          "password": "password123",
+          "role": "driver"
+        },
+        {
+          "name": "Grace Ofor",
+          "email": "grace.ofor@gmail.com",
+          "password": "password123",
+          "role": "driver"
+        },
+        {
+          "name": "Tunde Balogun",
+          "email": "tunde.balogun@gmail.com",
+          "password": "password123",
+          "role": "driver"
+        },
+        {
+          "name": "Aisha Suleiman",
+          "email": "aisha.suleiman@gmail.com",
+          "password": "password123",
+          "role": "driver"
+        }
+      ],
+
+
+
+   [
+    {
+      "rider": "67ad202f16c0c0b529b579be",
+      "pickupLocation": "Ikeja GRA, Lagos",
+      "pickupCoord": {
+        "longitude": 3.3621,
+        "latitude": 6.6018
+      },
+      "destination": "Maryland, Lagos",
+      "destinationCoord": {
+        "longitude": 3.3765,
+        "latitude": 6.5833
+      }
+    },
+    {
+      "rider": "67ad22f63f1bf5fb848d9805",
+      "pickupLocation": "Surulere, Lagos",
+      "pickupCoord": {
+        "longitude": 3.3541,
+        "latitude": 6.4994
+      },
+      "destination": "Yaba, Lagos",
+      "destinationCoord": {
+        "longitude": 3.3755,
+        "latitude": 6.5063
+      }
+    },
+    {
+      "rider": "67ad232e5c5670b18b5c66fc",
+      "pickupLocation": "Ajah, Lagos",
+      "pickupCoord": {
+        "longitude": 3.5852,
+        "latitude": 6.4667
+      },
+      "destination": "Sangotedo, Lagos",
+      "destinationCoord": {
+        "longitude": 3.6025,
+        "latitude": 6.4692
+      }
+    },
+    {
+      "rider": "65cb2c9f8b3d1e001c89a0b8",
+      "pickupLocation": "Ogba, Lagos",
+      "pickupCoord": {
+        "longitude": 3.3432,
+        "latitude": 6.6301
+      },
+      "destination": "Magodo, Lagos",
+      "destinationCoord": {
+        "longitude": 3.3778,
+        "latitude": 6.6483
+      }
+    },
+    {
+      "rider": "65cb2c9f8b3d1e001c89a0b9",
+      "pickupLocation": "Festac, Lagos",
+      "pickupCoord": {
+        "longitude": 3.3011,
+        "latitude": 6.4669
+      },
+      "destination": "Amuwo Odofin, Lagos",
+      "destinationCoord": {
+        "longitude": 3.3035,
+        "latitude": 6.4532
+      }
+    }
+  ]
+  
+  
+
+   
+]
