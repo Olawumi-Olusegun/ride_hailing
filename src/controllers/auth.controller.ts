@@ -2,6 +2,11 @@ import { Request, Response } from "express";
 import UserModel from "../models/user.model";
 import { generateToken } from "../utils/jwt";
 
+/**
+ * @desc Signup
+ * @route POST /api/v1/auth/signup
+ * @access Pulic
+ */
 export const signup = async (req: Request, res: Response) => {
 
   const { name, email, password, role } = req.body;
@@ -36,6 +41,11 @@ export const signup = async (req: Request, res: Response) => {
   }
 };
 
+/**
+ * @desc Signup
+ * @route POST /api/v1/auth/signin
+ * @access Pulic
+ */
 export const signin = async (req: Request, res: Response) => {
   const { email, password } = req.body;
 

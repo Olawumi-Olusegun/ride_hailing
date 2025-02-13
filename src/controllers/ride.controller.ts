@@ -5,6 +5,13 @@ import UserModel from "./../models/user.model";
 import mongoose from "mongoose";
 import { haversineDistance } from "../utils/haversineDistance";
 
+
+/**
+ * @desc Create Ride
+ * @route POST /api/v1/ride
+ * @access Protected
+ */
+
 export const createRide = async (req: Request, res: Response) => {
   try {
 
@@ -35,12 +42,16 @@ export const createRide = async (req: Request, res: Response) => {
   }
 };
 
-
+/**
+ * @desc Get all available rides
+ * @route GET /api/v1/ride
+ * @access Protected
+ */
 //Get all available rides (rides that haven't been accepted yet)
 export const getAvailableRides = async (req: AuthRequest, res: Response) => {
 
-  if (req.user?.role !== "driver") {
-    return res.status(403).json({ message: "Only drivers can view available rides" });
+  if (req.user?.role !== "rider") {
+    return res.status(403).json({ message: "Only riders can view available rides" });
   }
 
   try {
@@ -52,6 +63,11 @@ export const getAvailableRides = async (req: AuthRequest, res: Response) => {
 
 };
 
+/**
+ * @desc Accept Ride
+ * @route PATCH /api/v1/ride/accept
+ * @access Protected
+ */
 //Driver accepts a ride
 export const acceptRide = async (req: AuthRequest, res: Response) => {
   
@@ -81,6 +97,11 @@ export const acceptRide = async (req: AuthRequest, res: Response) => {
   }
 };
 
+/**
+ * @desc Accept Ride
+ * @route PATCH /api/v1/ride/completes
+ * @access Protected
+ */
 //Driver completes a ride
 export const completeRide = async (req: AuthRequest, res: Response) => {
   
@@ -111,6 +132,11 @@ export const completeRide = async (req: AuthRequest, res: Response) => {
 };
 
 
+/**
+ * @desc Match Rider with Driver
+ * @route PATCH /api/v1/ride/find-drivers/:riderId/:maxDistance
+ * @access Protected
+ */
 export const findNearbyDrivers = async (req: Request, res: Response) => {
 
   try {

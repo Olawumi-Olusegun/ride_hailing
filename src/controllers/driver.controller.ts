@@ -2,6 +2,11 @@ import { Response } from "express";
 import { AuthRequest } from "../types";
 import UserModel from "./../models/user.model"
 
+/**
+ * @desc Update current location with longitude and latitude coordinate
+ * @route PATCH /api/v1/driver/location
+ * @access Protected
+ */
 export const updateUserLocation = async (req: AuthRequest, res: Response) => {
   try {
 
