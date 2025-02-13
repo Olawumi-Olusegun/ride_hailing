@@ -114,7 +114,6 @@ export const completeRide = async (req: AuthRequest, res: Response) => {
 export const findNearbyDrivers = async (req: Request, res: Response) => {
 
   try {
-
     const { riderId, maxDistance } = req.params;
 
     // Fetch the rider's data
