@@ -1,8 +1,6 @@
 import { Request, Response } from "express";
 import UserModel from "../models/user.model";
 import { generateToken } from "../utils/jwt";
-import { validationResult } from "express-validator";
-
 
 /**
  * @desc Signup
@@ -11,11 +9,6 @@ import { validationResult } from "express-validator";
  */
 
 export const signup = async (req: Request, res: Response) => {
-
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ message: errors.array()[0].msg }); 
-  }
 
   const { name, email, password, role } = req.body;
 
@@ -51,11 +44,7 @@ export const signup = async (req: Request, res: Response) => {
  * @access Pulic
  */
 export const signin = async (req: Request, res: Response) => {
-  
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ message: errors.array()[0].msg }); 
-  }
+
 
   const { email, password } = req.body;
 
