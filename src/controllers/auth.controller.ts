@@ -1,19 +1,23 @@
 import { Request, Response } from "express";
 import UserModel from "../models/user.model";
 import { generateToken } from "../utils/jwt";
+import { validationResult } from "express-validator";
+
 
 /**
  * @desc Signup
  * @route POST /api/v1/auth/signup
  * @access Pulic
  */
+
 export const signup = async (req: Request, res: Response) => {
 
-  const { name, email, password, role } = req.body;
-
-  if (!name || !email || !password || !role) {
-    return res.status(400).json({ message: "All fields are required" });
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
   }
+
+  const { name, email, password, role } = req.body;
 
   if (!["rider", "driver"].includes(role)) {
     return res.status(400).json({ message: "Invalid role. Must be a 'rider' or 'driver'" });
@@ -47,6 +51,12 @@ export const signup = async (req: Request, res: Response) => {
  * @access Pulic
  */
 export const signin = async (req: Request, res: Response) => {
+  
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   const { email, password } = req.body;
 
   try {
